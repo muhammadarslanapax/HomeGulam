@@ -4,7 +4,6 @@ class AppColors {
   // static Color container = const Color.fromARGB(255, 37, 76, 95);
   // static Color background = Colors.black;
    static Color redColor = Colors.red;
-   static Color whiteCOlor = Colors.white;
    static Color blackColor = Colors.black;
    static Color tail = Colors.teal;
    static Color gridentColor = const Color(0XFFFFC0B2);
@@ -13,5 +12,15 @@ class AppColors {
    static Color locationBoxColor =   const Color(0XFFFCD6CE);
    static Color locationBoxTextColor =   const Color(0XFF292D32);
 
-// static Color textDark = Colors.white38;
+
+
+   // use these colors
+   static Color whiteColor = Colors.white;
+   static Color backgroundColor = Colors.white;
+   static Color primaryTextColor = const Color(0XFFDB9080);
+   static Color secondaryTextColor = const Color(0XFF666666);
+   static Color smallTextColor = const Color(0XFF292D32);
+   static Color dimTextColor = const Color(0XFF0F0F0F);
+   static Color dim2TextColor = const Color(0XFF9E9E9E);
+
 }
