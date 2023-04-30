@@ -24,7 +24,6 @@ class AppColors {
    static Color dim2TextColor = const Color(0XFF9E9E9E);
    static Color bottomnav_bg = const Color(0XFFFFF4F1);
    static Color indicator_color = const Color(0XFFDB9080);
-   static Color text_color = const Color(0XFF292D32);
 
 
    // bottom nav colors
@@ -32,6 +31,11 @@ class AppColors {
    static Color bottom_nav_bg_color = const Color(0XFFFFF4F1);
    static Color icon_select_color = const Color(0XFFDB9080);
    static Color icon_color = const Color(0XFF292D32);
+
+
+   //text color main screen
+   static Color text_color = const Color(0XFF292D32);
+
 
 
 }
