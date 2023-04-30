@@ -41,7 +41,7 @@ class _SplashState extends State<Splash> {
             gradient: LinearGradient(
                 begin: Alignment.topRight,
                 end: Alignment.bottomRight,
-                colors: [AppColors.gridentColor, AppColors.whiteCOlor])),
+                colors: [AppColors.gridentColor, AppColors.whiteColor])),
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

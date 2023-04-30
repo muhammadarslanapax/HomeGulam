@@ -91,7 +91,7 @@ class _IntroductionState extends State<Introduction> {
             color: AppColors.introTextColor),
         child: Text(
           "Get Started",
-          style: TextStyle(color: AppColors.whiteCOlor),
+          style: TextStyle(color: AppColors.whiteColor),
         ),
       ),
       showBackButton: false,
