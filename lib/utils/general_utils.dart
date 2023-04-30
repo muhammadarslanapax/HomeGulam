@@ -19,7 +19,7 @@ class Utils{
       backgroundColor: AppColors.redColor,
       messageColor: AppColors.blackColor,
       duration: const Duration(seconds: 2),
-      icon:  Icon(Icons.error,size: 20,color:AppColors.whiteCOlor,),
+      icon:  Icon(Icons.error,size: 20,color:AppColors.whiteColor,),
 
     )..show(context));
 
