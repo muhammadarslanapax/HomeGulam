@@ -101,6 +101,6 @@ class _IntroductionState extends State<Introduction> {
             context, MaterialPageRoute(builder: (context) => const HomePage()));
       },
     );
-    ;
+    // jfidjfiefjcdndjcdjf
   }
 }
