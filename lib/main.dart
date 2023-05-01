@@ -1,8 +1,6 @@
 import 'package:ecommerce_app/res/app_theme.dart';
 import 'package:ecommerce_app/utils/routes/route_handler.dart' as Routes;
 import 'package:ecommerce_app/utils/routes/routes_name.dart';
-import 'package:ecommerce_app/view/home/home_page.dart';
-import 'package:ecommerce_app/view/splash.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: CommonMethod().themedata,
       onGenerateRoute: Routes.generateRoutes,
-      initialRoute: RoutesName.homePage,
+      initialRoute: RoutesName.sigUpPage,
     );
   }
 }
