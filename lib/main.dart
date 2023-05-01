@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: CommonMethod().themedata,
       onGenerateRoute: Routes.generateRoutes,
-      initialRoute: RoutesName.homePage,
+      initialRoute: RoutesName.reviewsPage,
     );
   }
 }

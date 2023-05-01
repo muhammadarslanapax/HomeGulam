@@ -35,6 +35,10 @@ class AppColors {
 
    //text color main screen
    static Color text_color = const Color(0XFF292D32);
+   static Color text_color_light = const Color(0XFF9E9E9E);
+   static Color notification_icon_bg = const Color(0xFFFFF4F1);
+   static Color hint_color = const Color(0XFFE47058);
+   static Color star_color = const Color(0XFFFDBE61);
 
 
 
