@@ -11,6 +11,7 @@ class AppColors {
    static Color splashC0lor =   Colors.black;
    static Color locationBoxColor =   const Color(0XFFFCD6CE);
    static Color locationBoxTextColor =   const Color(0XFF292D32);
+   static Color textFieldBgColor =  const Color(0xFCFAEBEB);
 
 
 
