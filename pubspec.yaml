@@ -46,7 +46,9 @@ dependencies:
   introduction_screen: ^3.1.7
   dropdown_button2: ^2.1.0
   google_fonts: ^4.0.4
-  pin_code_fields: ^7.4.0
+ pin_code_fields: ^7.4.0
+=======
+  flutter_rating_bar: ^4.0.1
 
 
 

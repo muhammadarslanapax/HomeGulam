@@ -18,7 +18,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: CommonMethod().themedata,
       onGenerateRoute: Routes.generateRoutes,
-      initialRoute: RoutesName.sigUpPage,
+            initialRoute: RoutesName.sigUpPage,
+
+
     );
   }
 }
