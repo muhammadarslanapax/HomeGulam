@@ -4,8 +4,10 @@ import 'package:ecommerce_app/view/home/category/reviews.dart';
 import 'package:ecommerce_app/view/home/home_page.dart';
 import 'package:ecommerce_app/view/introduction_page.dart';
 import 'package:ecommerce_app/view/location/location_page.dart';
-import 'package:ecommerce_app/view/signup_page.dart';
+import 'package:ecommerce_app/view/logInPage.dart';
+import 'package:ecommerce_app/view/signUpPage.dart';
 import 'package:ecommerce_app/view/splash.dart';
+import 'package:ecommerce_app/view/varificationPage.dart';
 import 'package:flutter/material.dart';
 
 import '../../view/home/category/category_page.dart';
@@ -27,8 +29,12 @@ Route<dynamic> generateRoutes(RouteSettings settings) {
 
     case RoutesName.locationPage:
       return MaterialPageRoute(builder: (context) => const LocationPage());
-    case RoutesName.siginUpPage:
+    case RoutesName.sigUpPage:
       return MaterialPageRoute(builder: (context) => const SignUpPage());
+    case RoutesName.logInPage:
+      return MaterialPageRoute(builder: (context) => const LogInPage());
+    case RoutesName.verificationPage:
+      return MaterialPageRoute(builder: (context) => const VerificationPage());
 
     case RoutesName.notificationPage:
       return MaterialPageRoute(builder: (context) => const NotificationPage());
