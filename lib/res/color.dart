@@ -23,7 +23,8 @@ class AppColors {
    static Color smallTextColor = const Color(0XFF292D32);
    static Color dimTextColor = const Color(0XFF0F0F0F);
    static Color dim2TextColor = const Color(0XFF9E9E9E);
-   static Color bottomnav_bg = const Color(0XFFFFF4F1);
+   static Color dim3Color = const Color(0XF5F5F5FF);
+   static Color bottomnav_bg = const Color(0xFFFFF4F1);
    static Color indicator_color = const Color(0XFFDB9080);
 
 
