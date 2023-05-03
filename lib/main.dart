@@ -46,7 +46,7 @@ class _MyAppState extends State<MyApp> {
          )
       ),
       onGenerateRoute: Routes.generateRoutes,
-      initialRoute: RoutesName.bookingPage,
+      initialRoute: RoutesName.cardPage,
 
     );
   }

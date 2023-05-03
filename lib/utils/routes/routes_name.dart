@@ -12,5 +12,9 @@ abstract class RoutesName{
   static const String oppointmentPage = 'oppoitment';
   static const String reviewsPage = 'reviews';
   static const String bookingPage = 'booking';
+  static const String accountPage = 'account';
+  static const String profilePage = 'profile';
+  static const String favouritePage = 'Favourite';
+  static const String cardPage = 'card';
 
 }
