@@ -10,12 +10,12 @@ class SignUpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: AppColors.whiteColor,
 
         body: Container(
-          height: MediaQuery.of(context).size.height*.9,
           margin: const EdgeInsets.symmetric(horizontal: 20),
           child: SingleChildScrollView(
 
@@ -38,6 +38,7 @@ class SignUpPage extends StatelessWidget {
                          Text('Name', style: TextStyle(fontSize: 16)),
                          SizedBox(height: 50,
                            child: TextFormField(
+                             keyboardType: TextInputType.name,
                              decoration: InputDecoration(
                                filled: true,
                                fillColor: AppColors.textFieldBgColor,
@@ -61,11 +62,11 @@ class SignUpPage extends StatelessWidget {
                          Text('Email', style: TextStyle(fontSize: 16)),
                          SizedBox(height: 50,
                            child: TextFormField(
+                             keyboardType: TextInputType.emailAddress,
                              decoration: InputDecoration(
                                filled: true,
                                fillColor: AppColors.textFieldBgColor,
                                border: Styles().textFieldStyle(),
-
                              ),
                            ),
                          )
@@ -88,8 +89,7 @@ class SignUpPage extends StatelessWidget {
                                filled: true,
                                fillColor: AppColors.textFieldBgColor,
                                border: Styles().textFieldStyle(),
-
-                               ),
+                             ),
                            ),
                          )
                        ],

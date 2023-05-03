@@ -1,10 +1,13 @@
 import 'package:ecommerce_app/utils/routes/routes_name.dart';
+import 'package:ecommerce_app/view/home/category/booking_page.dart';
 import 'package:ecommerce_app/view/home/category/oppoointment.dart';
 import 'package:ecommerce_app/view/home/category/reviews.dart';
 import 'package:ecommerce_app/view/home/home_page.dart';
 import 'package:ecommerce_app/view/introduction_page.dart';
 import 'package:ecommerce_app/view/location/location_page.dart';
 import 'package:ecommerce_app/view/logInPage.dart';
+import 'package:ecommerce_app/view/payment/checkoutPage.dart';
+import 'package:ecommerce_app/view/payment/paymentPage.dart';
 import 'package:ecommerce_app/view/signUpPage.dart';
 import 'package:ecommerce_app/view/splash.dart';
 import 'package:ecommerce_app/view/varificationPage.dart';
@@ -36,6 +39,10 @@ Route<dynamic> generateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const LogInPage());
     case RoutesName.verificationPage:
       return MaterialPageRoute(builder: (context) => const VerificationPage());
+    case RoutesName.paymentPage:
+      return MaterialPageRoute(builder: (context) => const PaymentPage());
+    case RoutesName.checkoutPage:
+      return MaterialPageRoute(builder: (context) => const CheckoutPage());
 
     case RoutesName.notificationPage:
       return MaterialPageRoute(builder: (context) => const NotificationPage());
@@ -48,6 +55,8 @@ Route<dynamic> generateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const ReviewsPage());
     case RoutesName.agreementPage:
       return MaterialPageRoute(builder: (context) => const Agreement());
+    case RoutesName.bookingPage:
+      return MaterialPageRoute(builder: (context) => const BookingPage());
     default:
       throw ('This route name does not exit');
   }
