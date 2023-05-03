@@ -2,6 +2,8 @@ import 'package:ecommerce_app/res/app_theme.dart';
 import 'package:ecommerce_app/res/color.dart';
 import 'package:ecommerce_app/utils/routes/route_handler.dart' as Routes;
 import 'package:ecommerce_app/utils/routes/routes_name.dart';
+import 'package:ecommerce_app/view/agreementPage.dart';
+import 'package:ecommerce_app/view/agreementPage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -46,7 +48,8 @@ class _MyAppState extends State<MyApp> {
          )
       ),
       onGenerateRoute: Routes.generateRoutes,
-      initialRoute: RoutesName.cardPage,
+      initialRoute: RoutesName.homePage,
+
 
     );
   }
