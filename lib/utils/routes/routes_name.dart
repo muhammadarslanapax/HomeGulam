@@ -11,5 +11,6 @@ static const String sigUpPage = 'signup';
   static const String categoryPage = 'category';
   static const String oppointmentPage = 'oppoitment';
   static const String reviewsPage = 'reviews';
+  static const String agreementPage = 'agreement';
 
 }
