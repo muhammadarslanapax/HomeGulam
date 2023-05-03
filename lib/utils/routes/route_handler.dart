@@ -13,6 +13,7 @@ import 'package:ecommerce_app/view/splash.dart';
 import 'package:ecommerce_app/view/varificationPage.dart';
 import 'package:flutter/material.dart';
 
+import '../../view/agreementPage.dart';
 import '../../view/home/category/category_page.dart';
 import '../../view/home/home/notification.dart';
 
@@ -52,6 +53,8 @@ Route<dynamic> generateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const Oppointment());
     case RoutesName.reviewsPage:
       return MaterialPageRoute(builder: (context) => const ReviewsPage());
+    case RoutesName.agreementPage:
+      return MaterialPageRoute(builder: (context) => const Agreement());
     case RoutesName.bookingPage:
       return MaterialPageRoute(builder: (context) => const BookingPage());
     default:
