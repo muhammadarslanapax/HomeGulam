@@ -10,6 +10,8 @@ class LogInPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final emailController = TextEditingController();
+    final passwordController = TextEditingController();
     return SafeArea(
       child: Scaffold(
         backgroundColor: AppColors.whiteColor,
@@ -32,15 +34,17 @@ class LogInPage extends StatelessWidget {
                       width: double.infinity,
                       child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Email', style: TextStyle(fontSize: 16)),
+                          const Text('Email', style: TextStyle(fontSize: 16)),
                           SizedBox(height: 50,
                             child: TextFormField(
                               decoration: InputDecoration(
                                 filled: true,
                                 fillColor: AppColors.textFieldBgColor,
                                 border: Styles().textFieldStyle(),
-
                               ),
+
+                              controller: emailController,
+
                             ),
                           )
                         ],
@@ -64,6 +68,8 @@ class LogInPage extends StatelessWidget {
                                 border: Styles().textFieldStyle(),
 
                               ),
+                              controller: passwordController,
+
                             ),
                           )
                         ],
