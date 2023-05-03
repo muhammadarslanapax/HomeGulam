@@ -15,6 +15,7 @@ import 'package:flutter/material.dart';
 
 import '../../view/home/category/category_page.dart';
 import '../../view/home/home/notification.dart';
+import '../../view/payment/slotBookedPage.dart';
 
 // Define Routes
 
@@ -42,6 +43,8 @@ Route<dynamic> generateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const PaymentPage());
     case RoutesName.checkoutPage:
       return MaterialPageRoute(builder: (context) => const CheckoutPage());
+    case RoutesName.slotBookingPage:
+      return MaterialPageRoute(builder: (context) => const SlotBookingPage());
 
     case RoutesName.notificationPage:
       return MaterialPageRoute(builder: (context) => const NotificationPage());

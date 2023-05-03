@@ -8,7 +8,7 @@ abstract class RoutesName{
   static const String verificationPage = 'verification';
   static const String paymentPage = 'payment';
   static const String checkoutPage = 'checkout';
-  static const String siginUpPage = 'signup';
+  static const String slotBookingPage = 'slotBooking';
   static const String notificationPage = 'notification';
   static const String categoryPage = 'category';
   static const String oppointmentPage = 'oppoitment';
