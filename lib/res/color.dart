@@ -40,6 +40,7 @@ class AppColors {
    static Color notification_icon_bg = const Color(0xFFFFF4F1);
    static Color hint_color = const Color(0XFFE47058);
    static Color star_color = const Color(0XFFFDBE61);
+   static Color box_color = const Color(0XFFFCD6CE);
 
 
 
