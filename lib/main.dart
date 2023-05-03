@@ -15,10 +15,11 @@ class MyApp extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return MaterialApp(
+
       debugShowCheckedModeBanner: false,
       theme: CommonMethod().themedata,
       onGenerateRoute: Routes.generateRoutes,
-            initialRoute: RoutesName.logInPage,
+      initialRoute: RoutesName.homePage,
 
 
     );
