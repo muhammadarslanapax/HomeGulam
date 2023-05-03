@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/utils/routes/routes_name.dart';
+import 'package:ecommerce_app/view/home/category/booking_page.dart';
 import 'package:ecommerce_app/view/home/category/oppoointment.dart';
 import 'package:ecommerce_app/view/home/category/reviews.dart';
 import 'package:ecommerce_app/view/home/home_page.dart';
@@ -51,6 +52,8 @@ Route<dynamic> generateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const Oppointment());
     case RoutesName.reviewsPage:
       return MaterialPageRoute(builder: (context) => const ReviewsPage());
+    case RoutesName.bookingPage:
+      return MaterialPageRoute(builder: (context) => const BookingPage());
     default:
       throw ('This route name does not exit');
   }
