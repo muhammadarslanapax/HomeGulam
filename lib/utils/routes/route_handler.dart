@@ -1,4 +1,7 @@
 import 'package:ecommerce_app/utils/routes/routes_name.dart';
+import 'package:ecommerce_app/view/home/account/account_page.dart';
+import 'package:ecommerce_app/view/home/account/favourite_page.dart';
+import 'package:ecommerce_app/view/home/account/profile_page.dart';
 import 'package:ecommerce_app/view/home/category/booking_page.dart';
 import 'package:ecommerce_app/view/home/category/oppoointment.dart';
 import 'package:ecommerce_app/view/home/category/reviews.dart';
@@ -13,6 +16,7 @@ import 'package:ecommerce_app/view/splash.dart';
 import 'package:ecommerce_app/view/varificationPage.dart';
 import 'package:flutter/material.dart';
 
+import '../../view/home/account/card_page.dart';
 import '../../view/agreementPage.dart';
 import '../../view/home/category/category_page.dart';
 import '../../view/home/home/notification.dart';
@@ -57,6 +61,14 @@ Route<dynamic> generateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const Agreement());
     case RoutesName.bookingPage:
       return MaterialPageRoute(builder: (context) => const BookingPage());
+    case RoutesName.accountPage:
+      return MaterialPageRoute(builder: (context) => const Account());
+    case RoutesName.profilePage:
+      return MaterialPageRoute(builder: (context) => const ProfilePage());
+    case RoutesName.favouritePage:
+      return MaterialPageRoute(builder: (context) => const FavouritePage());
+    case RoutesName.cardPage:
+      return MaterialPageRoute(builder: (context) => const CardPage());
     default:
       throw ('This route name does not exit');
   }
