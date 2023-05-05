@@ -15,5 +15,9 @@ abstract class RoutesName{
   static const String reviewsPage = 'reviews';
   static const String agreementPage = 'agreement';
   static const String bookingPage = 'booking';
+  static const String termandcondition = 'termandcondition';
+  static const String pagenotfound = 'pagenotfound';
+  static const String settings = 'settings';
+  static const String shopstartuppage = 'shopstartuppage';
 
 }

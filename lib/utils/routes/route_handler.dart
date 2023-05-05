@@ -13,9 +13,13 @@ import 'package:ecommerce_app/view/splash.dart';
 import 'package:ecommerce_app/view/varificationPage.dart';
 import 'package:flutter/material.dart';
 
+import '../../view/BuisnessStartup/shopStartupPage.dart';
 import '../../view/agreementPage.dart';
+import '../../view/home/account/page_noteFound.dart';
+import '../../view/home/account/term_and_condition.dart';
 import '../../view/home/category/category_page.dart';
 import '../../view/home/home/notification.dart';
+import '../../view/settings.dart';
 
 // Define Routes
 
@@ -57,6 +61,14 @@ Route<dynamic> generateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const Agreement());
     case RoutesName.bookingPage:
       return MaterialPageRoute(builder: (context) => const BookingPage());
+    case RoutesName.termandcondition:
+      return MaterialPageRoute(builder: (context) => const Term_and_Conditions());
+    case RoutesName.pagenotfound:
+      return MaterialPageRoute(builder: (context) => const PAge_NoteFound());
+    case RoutesName.settings:
+      return MaterialPageRoute(builder: (context) => const Settings());
+    case RoutesName.shopstartuppage:
+      return MaterialPageRoute(builder: (context) => const ShopStartup());
     default:
       throw ('This route name does not exit');
   }
