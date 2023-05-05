@@ -1,6 +1,8 @@
 import 'package:ecommerce_app/res/color.dart';
 import 'package:ecommerce_app/utils/routes/route_handler.dart' as Routes;
 import 'package:ecommerce_app/utils/routes/routes_name.dart';
+import 'package:ecommerce_app/view/agreementPage.dart';
+import 'package:ecommerce_app/view/agreementPage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -47,7 +49,10 @@ class _MyAppState extends State<MyApp> {
         // headlineSmall: GoogleFonts.poppins(fontSize: 20,color: AppColors.redColor,fontWeight: FontWeight.w700),
       )),
       onGenerateRoute: Routes.generateRoutes,
-      initialRoute: RoutesName.slotBookingPage,
+
+      initialRoute: RoutesName.homePage,
+
+
     );
   }
 }
