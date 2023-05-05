@@ -23,7 +23,7 @@ class CustomAppBar extends StatelessWidget {
       title: Text(
         "$text",
         style: GoogleFonts.poppins(
-            fontSize: 22,
+            fontSize: 20,
             fontWeight: FontWeight.w500,
             color: txtcolor),
       ),
