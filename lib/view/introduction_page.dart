@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/res/color.dart';
 import 'package:ecommerce_app/view/home/home_page.dart';
+import 'package:ecommerce_app/view/location/location_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
@@ -99,7 +100,7 @@ class _IntroductionState extends State<Introduction> {
       showNextButton: false,
       onDone: () {
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+            context, MaterialPageRoute(builder: (context) => const LocationPage()));
       },
     );
 

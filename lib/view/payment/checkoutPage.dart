@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../res/components/custom_appbar.dart';
 import '../../utils/general_utils.dart';
+import '../../utils/routes/routes_name.dart';
 
 class CheckoutPage extends StatelessWidget {
   const CheckoutPage({Key? key}) : super(key: key);
@@ -120,6 +121,8 @@ class CheckoutPage extends StatelessWidget {
                           style: TextStyle(
                               fontSize: 16, color: AppColors.whiteColor)),
                       onPressed: () {
+                        Navigator.pushNamed(context, RoutesName.slotBookingPage);
+
 
                       }),
                 )
