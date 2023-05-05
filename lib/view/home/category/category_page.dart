@@ -41,7 +41,7 @@ class _CategoryState extends State<Category> {
         title: Text(currentTitle.toString(),style: TextStyle(color: AppColors.blackColor),),
         backgroundColor: AppColors.whiteColor,centerTitle: true,
         elevation: 0,
-        leading: const BackButton(color: Colors.black),
+        leading:  BackButton(color: Colors.black),
       ),
       body: DefaultTabController(
         length: 8,

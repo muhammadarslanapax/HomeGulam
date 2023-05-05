@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-enum Card {CradPayment, GoolgePay, Paypal}
+enum Card1 {CradPayment, GoolgePay, Paypal}
 
 class BookingPage extends StatelessWidget {
   const BookingPage({Key? key}) : super(key: key);
@@ -15,7 +15,7 @@ class BookingPage extends StatelessWidget {
 
     final category = ['Face',"Hair","Nails","Body","Henna","Photography","Event Decor","Tailoring"];
 
-    Card? _card;
+    Card1? _card;
     final _theme = Theme.of(context).textTheme;
     final _width = MediaQuery.of(context).size.width;
     final _height = MediaQuery.of(context).size.height;
@@ -116,16 +116,16 @@ class BookingPage extends StatelessWidget {
 
               Text("Preferred Payment Method",style: _theme.bodyLarge,),
               const SizedBox(height: 10,),
-              RadioListTile(value: Card.CradPayment, groupValue: _card, onChanged: (value){
+              RadioListTile(value: Card1.CradPayment, groupValue: _card, onChanged: (value){
                 _card = value;
                 print(value);
               },title:  Text("Card Payment",style: _theme.bodyMedium?.copyWith(color: AppColors.icon_select_color),),),
-              RadioListTile(value: Card.CradPayment, groupValue: _card, onChanged: (value){
+              RadioListTile(value: Card1.CradPayment, groupValue: _card, onChanged: (value){
                 _card = value;
                 print(value);
               },title:  Text("Card Payment",style: _theme.bodyMedium?.copyWith(color: AppColors.icon_select_color),),),
 
-              RadioListTile(value: Card.CradPayment, groupValue: _card, onChanged: (value){
+              RadioListTile(value: Card1.CradPayment, groupValue: _card, onChanged: (value){
                 _card = value;
                 print(value);
               },title:  Text("Card Payment",style: _theme.bodyMedium?.copyWith(color: AppColors.icon_select_color),),),
