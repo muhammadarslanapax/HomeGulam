@@ -50,7 +50,7 @@ class _MyAppState extends State<MyApp> {
          )
       ),
       onGenerateRoute: Routes.generateRoutes,
-      initialRoute: RoutesName.shopstartuppage,
+      initialRoute: RoutesName.homePage,
 
 
     );
