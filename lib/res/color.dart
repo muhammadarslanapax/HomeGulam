@@ -23,9 +23,13 @@ class AppColors {
    static Color smallTextColor = const Color(0xFF292D32);
    static Color dimTextColor = const Color(0xFF0F0F0F);
    static Color dim2TextColor = const Color(0xFF9E9E9E);
+   static Color dim3Color = const Color(0xF5F5F5FF);
    static Color bottomnav_bg = const Color(0xFFFFF4F1);
    static Color indicator_color = const Color(0xFFDB9080);
    static Color dim3Color = const Color(0xF5F5F5FF);
+   static Color dim3Color = const Color(0XF5F5F5FF);
+   static Color bottomnav_bg = const Color(0xFFFFF4F1);
+   static Color indicator_color = const Color(0xFFDB9080);
 
 
    // bottom nav colors
@@ -45,6 +49,11 @@ class AppColors {
    static Color box_color = const Color(0xFFFCD6CE);
    static Color text2_color = const Color(0xFF9D9D9D);
    static Color text3_color = const Color(0xFFF1F1F1);
+   static Color box_colorlight = const Color(0xFFFFF0ED);
+
+   static Color hint_color = const Color(0XFFE47058);
+   static Color star_color = const Color(0XFFFDBE61);
+   static Color box_color = const Color(0XFFFCD6CE);
 
 
 

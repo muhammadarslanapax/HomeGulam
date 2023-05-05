@@ -4,6 +4,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+enum Card1 {CradPayment, GoolgePay, Paypal}
+
 class BookingPage extends StatelessWidget {
   const BookingPage({Key? key}) : super(key: key);
 
@@ -13,6 +15,7 @@ class BookingPage extends StatelessWidget {
 
     final category = ['Face',"Hair","Nails","Body","Henna","Photography","Event Decor","Tailoring"];
 
+    Card1? _card;
     final _theme = Theme.of(context).textTheme;
     final _width = MediaQuery.of(context).size.width;
     final _height = MediaQuery.of(context).size.height;
@@ -35,6 +38,7 @@ class BookingPage extends StatelessWidget {
               Text("Date",style: _theme.bodyLarge,),
               const SizedBox(height: 10,),
               GridView.builder(
+                physics: ScrollPhysics(),
                 shrinkWrap: true,
                 padding: const EdgeInsets.all(5.0),
                 itemCount: 10,
@@ -67,6 +71,8 @@ class BookingPage extends StatelessWidget {
               const SizedBox(height: 20,),
               Text("Time",style: _theme.bodyLarge,),
               GridView.builder(
+                physics: ScrollPhysics(),
+
                 shrinkWrap: true,
                 padding: const EdgeInsets.all(5.0),
                 itemCount: 6,
@@ -109,6 +115,40 @@ class BookingPage extends StatelessWidget {
 
 
               Text("Preferred Payment Method",style: _theme.bodyLarge,),
+              const SizedBox(height: 10,),
+              RadioListTile(value: Card1.CradPayment, groupValue: _card, onChanged: (value){
+                _card = value;
+                print(value);
+              },title:  Text("Card Payment",style: _theme.bodyMedium?.copyWith(color: AppColors.icon_select_color),),),
+              RadioListTile(value: Card1.CradPayment, groupValue: _card, onChanged: (value){
+                _card = value;
+                print(value);
+              },title:  Text("Card Payment",style: _theme.bodyMedium?.copyWith(color: AppColors.icon_select_color),),),
+
+              RadioListTile(value: Card1.CradPayment, groupValue: _card, onChanged: (value){
+                _card = value;
+                print(value);
+              },title:  Text("Card Payment",style: _theme.bodyMedium?.copyWith(color: AppColors.icon_select_color),),),
+
+
+
+              InkWell(
+                onTap: (){
+
+                },
+                child: Container(
+                  height: 50,
+                  width: _width,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    color: AppColors.notification_icon_bg,
+
+                  ),
+                  child: Center(
+                    child: Text("Confirm appointment",style: TextStyle(color: AppColors.icon_select_color),),
+                  ),
+                ),
+              )
               
 
 

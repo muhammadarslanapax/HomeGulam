@@ -7,12 +7,12 @@ import '../color.dart';
 class CustomAppBar extends StatelessWidget {
   final String text ;
   final Color txtcolor;
-  final IconData  iconData ;
+  final IconData?  iconData ;
 
 
 
   const CustomAppBar({
-    super.key, required this.text, required this.txtcolor, required this.iconData,
+    super.key, required this.text, required this.txtcolor,  this.iconData,
   });
 
   @override
@@ -23,7 +23,7 @@ class CustomAppBar extends StatelessWidget {
       title: Text(
         "$text",
         style: GoogleFonts.poppins(
-            fontSize: 22,
+            fontSize: 20,
             fontWeight: FontWeight.w500,
             color: txtcolor),
       ),

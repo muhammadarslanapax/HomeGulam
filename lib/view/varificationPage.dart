@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/res/color.dart';
+import 'package:ecommerce_app/res/components/custom_appbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -16,23 +17,9 @@ class _VerificationPageState extends State<VerificationPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-          backgroundColor: AppColors.whiteColor,
-          appBar: AppBar(
-              backgroundColor: AppColors.whiteColor,
-              elevation: 0,
-              centerTitle: true,
-              title: Text('Verification',
-                  style: TextStyle(color: AppColors.blackColor)),
-              leading: SizedBox(
-                height: 25,
-                width: 25,
-                child: IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.arrow_back_rounded,
-                      color: AppColors.blackColor,
-                    )),
-              )),
+          appBar: PreferredSize(preferredSize: Size.fromHeight(60),
+          child: CustomAppBar(text: 'verification', txtcolor: AppColors.blackColor, iconData: Icons.arrow_back_rounded,),),
+
           body: SingleChildScrollView(
             child: Container(
               height: MediaQuery.of(context).size.height * .8,

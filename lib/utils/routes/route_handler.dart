@@ -1,4 +1,7 @@
 import 'package:ecommerce_app/utils/routes/routes_name.dart';
+import 'package:ecommerce_app/view/home/account/account_page.dart';
+import 'package:ecommerce_app/view/home/account/favourite_page.dart';
+import 'package:ecommerce_app/view/home/account/profile_page.dart';
 import 'package:ecommerce_app/view/home/category/booking_page.dart';
 import 'package:ecommerce_app/view/home/category/oppoointment.dart';
 import 'package:ecommerce_app/view/home/category/reviews.dart';
@@ -14,12 +17,15 @@ import 'package:ecommerce_app/view/varificationPage.dart';
 import 'package:flutter/material.dart';
 
 import '../../view/BuisnessStartup/shopStartupPage.dart';
+
+import '../../view/home/account/card_page.dart';
 import '../../view/agreementPage.dart';
 import '../../view/home/account/page_noteFound.dart';
 import '../../view/home/account/term_and_condition.dart';
 import '../../view/home/category/category_page.dart';
 import '../../view/home/home/notification.dart';
 import '../../view/settings.dart';
+import '../../view/payment/slotBookedPage.dart';
 
 // Define Routes
 
@@ -47,6 +53,8 @@ Route<dynamic> generateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const PaymentPage());
     case RoutesName.checkoutPage:
       return MaterialPageRoute(builder: (context) => const CheckoutPage());
+    case RoutesName.slotBookingPage:
+      return MaterialPageRoute(builder: (context) => const SlotBookingPage());
 
     case RoutesName.notificationPage:
       return MaterialPageRoute(builder: (context) => const NotificationPage());
@@ -69,6 +77,14 @@ Route<dynamic> generateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const Settings());
     case RoutesName.shopstartuppage:
       return MaterialPageRoute(builder: (context) => const ShopStartup());
+    case RoutesName.accountPage:
+      return MaterialPageRoute(builder: (context) => const Account());
+    case RoutesName.profilePage:
+      return MaterialPageRoute(builder: (context) => const ProfilePage());
+    case RoutesName.favouritePage:
+      return MaterialPageRoute(builder: (context) => const FavouritePage());
+    case RoutesName.cardPage:
+      return MaterialPageRoute(builder: (context) => const CardPage());
     default:
       throw ('This route name does not exit');
   }
