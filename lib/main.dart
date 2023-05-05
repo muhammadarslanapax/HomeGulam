@@ -47,7 +47,7 @@ class _MyAppState extends State<MyApp> {
         // headlineSmall: GoogleFonts.poppins(fontSize: 20,color: AppColors.redColor,fontWeight: FontWeight.w700),
       )),
       onGenerateRoute: Routes.generateRoutes,
-      initialRoute: RoutesName.homePage,
+      initialRoute: RoutesName.slotBookingPage,
     );
   }
 }
