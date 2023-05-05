@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/res/color.dart';
+import 'package:ecommerce_app/utils/routes/routes_name.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -13,6 +14,8 @@ class Oppointment extends StatefulWidget {
 }
 
 class _OppointmentState extends State<Oppointment> {
+  bool a = false;
+
   @override
   Widget build(BuildContext context) {
     final _width = MediaQuery.of(context).size.width;
@@ -37,15 +40,20 @@ class _OppointmentState extends State<Oppointment> {
               Positioned(
                 top: 20,
                 left: 18,
-                child: Container(
-                  width: 35,
-                  height: 35,
-                  decoration: BoxDecoration(
-                      color: AppColors.notification_icon_bg,
-                      borderRadius: BorderRadius.circular(6)),
-                  child: const Icon(
-                    Icons.arrow_back,
-                    size: 17,
+                child: InkWell(
+                  onTap: (){
+                    Navigator.pop(context);
+                  },
+                  child: Container(
+                    width: 35,
+                    height: 35,
+                    decoration: BoxDecoration(
+                        color: AppColors.notification_icon_bg,
+                        borderRadius: BorderRadius.circular(6)),
+                    child: const Icon(
+                      Icons.arrow_back,
+                      size: 17,
+                    ),
                   ),
                 ),
               ),
@@ -160,41 +168,95 @@ class _OppointmentState extends State<Oppointment> {
             padding: const EdgeInsets.only(left: 22.0, right: 13, top: 7),
             child: Row(
               children: [
-                Container(
-                  width: 45,
-                  height: 49,
-                  decoration: BoxDecoration(
-                      color: AppColors.notification_icon_bg,
-                      borderRadius: BorderRadius.circular(6)),
-                  child: const Icon(
-                    Icons.phone_outlined,
-                    size: 25,
+                InkWell(
+                  onTap:(){
+                    Navigator.pushNamed(context, RoutesName.bookingPage);
+
+
+                  },
+                  child: Container(
+                    width: 45,
+                    height: 49,
+                    decoration: BoxDecoration(
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Colors.grey,
+                            offset: Offset(0.0, 0.3), //(x,y)
+                            blurRadius: 1.0,
+                          ),
+                        ],
+                        color: AppColors.notification_icon_bg,
+                        borderRadius: BorderRadius.circular(6)),
+                    child: const Icon(
+                      Icons.phone_outlined,
+                      size: 25,
+                    ),
                   ),
                 ),
                 const SizedBox(
                   width: 11,
                 ),
-                Container(
-                  width: 45,
-                  height: 49,
-                  decoration: BoxDecoration(
-                      color: AppColors.notification_icon_bg,
-                      borderRadius: BorderRadius.circular(6)),
-                  child: const Icon(
-                    Icons.message_outlined,
-                    size: 25,
+                InkWell(
+                  onTap: (){
+                    Navigator.pushNamed(context, RoutesName.reviewsPage);
+                  },
+                  child: Container(
+                    width: 45,
+                    height: 49,
+                    decoration: BoxDecoration(
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Colors.grey,
+                            offset: Offset(0.0, 0.3), //(x,y)
+                            blurRadius: 1.0,
+                          ),
+                        ],
+                        color: AppColors.notification_icon_bg,
+                        borderRadius: BorderRadius.circular(6)),
+                    child: const Icon(
+                      Icons.message_outlined,
+                      size: 25,
+                    ),
                   ),
                 ),
                 Flexible(child: Container()),
-                Container(
-                  width: 45,
-                  height: 49,
-                  decoration: BoxDecoration(
-                      color: AppColors.notification_icon_bg,
-                      borderRadius: BorderRadius.circular(6)),
-                  child: const Icon(
-                    Icons.favorite_outline,
-                    size: 25,
+                InkWell(
+                  onTap: (){
+                    setState(() {
+
+                    });
+                    if(a ){
+                      a = false;
+
+
+                    }else{
+                      a = true;
+
+                    }
+                    print(a);
+                  },
+                  child: Container(
+
+                    width: 45,
+                    height: 49,
+                    decoration: BoxDecoration(
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Colors.grey,
+                            offset: Offset(0.0, 0.3), //(x,y)
+                            blurRadius: 1.0,
+                          ),
+                        ],
+                        color: AppColors.notification_icon_bg,
+                        borderRadius: BorderRadius.circular(6)),
+                    child: a ? Icon(
+                      Icons.favorite,
+                      color: AppColors.redColor,
+                      size: 25,
+                    ):Icon(
+                      Icons.favorite_outline,
+                      size: 25,
+                    ),
                   ),
                 ),
               ],
@@ -256,19 +318,25 @@ class _OppointmentState extends State<Oppointment> {
                       " fdf sdf df df dsfdsf fefef df efsef ew sd sfd f"),
             ),
           ),
-          Container(
-            margin: const EdgeInsets.only(left: 12, right: 12, top: 4),
-            width: _width,
-            height: 50,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: AppColors.icon_select_color),
-            child: Center(
-              child: Text("Book an oppintment",
-                  style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 22,
-                      color: AppColors.whiteColor)),
+          InkWell(
+            onTap: (){
+              Navigator.pushNamed(context, RoutesName.paymentPage);
+
+            },
+            child: Container(
+              margin: const EdgeInsets.only(left: 12, right: 12, top: 4),
+              width: _width,
+              height: 50,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  color: AppColors.icon_select_color),
+              child: Center(
+                child: Text("Book an oppintment",
+                    style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 22,
+                        color: AppColors.whiteColor)),
+              ),
             ),
           )
         ],

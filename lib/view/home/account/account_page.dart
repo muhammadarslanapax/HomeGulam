@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/res/color.dart';
 import 'package:ecommerce_app/res/components/custom_appbar.dart';
+import 'package:ecommerce_app/utils/routes/routes_name.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
@@ -30,6 +31,7 @@ class Account extends StatelessWidget {
 
 
             onTap: (){
+              Navigator.pushNamed(context, RoutesName.profilePage);
 
             },
             leading: const SizedBox(
@@ -52,6 +54,9 @@ class Account extends StatelessWidget {
             padding: EdgeInsets.only(left: 8.0),
             child: ListTile(
               onTap: (){
+                Navigator.pushNamed(context, RoutesName.favouritePage);
+
+
 
               },
               leading: const Icon(Icons.favorite_outline),
@@ -70,6 +75,8 @@ class Account extends StatelessWidget {
             padding: EdgeInsets.only(left: 8.0),
             child: ListTile(
               onTap: (){
+                Navigator.pushNamed(context, RoutesName.paymentPage);
+
 
               },
               leading: const Icon(Icons.payments_outlined),
@@ -89,6 +96,7 @@ class Account extends StatelessWidget {
             padding: const EdgeInsets.only(left: 8.0),
             child: ListTile(
               onTap: (){
+
 
               },
               leading: const Icon(Icons.settings_outlined),

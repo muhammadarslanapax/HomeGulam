@@ -11,6 +11,7 @@ class Introduction extends StatefulWidget {
 }
 
 class _IntroductionState extends State<Introduction> {
+  
   List<PageViewModel> listPagesViewModal = [
     PageViewModel(
       title: "Find home service hear you",
@@ -23,7 +24,7 @@ class _IntroductionState extends State<Introduction> {
         height: 623,
       ),
       decoration: PageDecoration(
-        imageFlex: 5,
+        imageFlex: 2,
         titleTextStyle: TextStyle(
             color: AppColors.introTextColor,
             fontWeight: FontWeight.bold,
@@ -42,7 +43,7 @@ class _IntroductionState extends State<Introduction> {
         height: 623,
       ),
       decoration: PageDecoration(
-        imageFlex: 5,
+        imageFlex: 2,
         titleTextStyle: TextStyle(
             color: AppColors.introTextColor,
             fontWeight: FontWeight.bold,
@@ -61,7 +62,7 @@ class _IntroductionState extends State<Introduction> {
         height: 623,
       ),
       decoration: PageDecoration(
-        imageFlex: 5,
+        imageFlex: 2,
         titleTextStyle: TextStyle(
             color: AppColors.introTextColor,
             fontWeight: FontWeight.bold,
