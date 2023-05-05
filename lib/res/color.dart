@@ -51,8 +51,6 @@ class AppColors {
    static Color text3_color = const Color(0xFFF1F1F1);
    static Color box_colorlight = const Color(0xFFFFF0ED);
 
-   static Color hint_color = const Color(0XFFE47058);
-   static Color star_color = const Color(0XFFFDBE61);
    static Color box_color = const Color(0XFFFCD6CE);
 
 
