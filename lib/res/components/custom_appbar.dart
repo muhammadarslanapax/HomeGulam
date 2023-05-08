@@ -8,11 +8,11 @@ class CustomAppBar extends StatelessWidget {
   final String text ;
   final Color txtcolor;
   final IconData?  iconData ;
-
+  final bool centerTitle;
 
 
   const CustomAppBar({
-    super.key, required this.text, required this.txtcolor,  this.iconData,
+    super.key, this.text ="", this.txtcolor = Colors.black38,  this.iconData,this.centerTitle =true
   });
 
   @override
@@ -27,14 +27,22 @@ class CustomAppBar extends StatelessWidget {
             fontWeight: FontWeight.w500,
             color: txtcolor),
       ),
-      centerTitle: true,
-      leading: IconButton(
-        onPressed: () {},
-        icon: Icon(
-          iconData,
-          color: AppColors.blackColor,
-        ),
-      ),
+      centerTitle: centerTitle,
+      leading: (() {
+        if(centerTitle){
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              iconData,
+              color: AppColors.blackColor,
+            ),
+          );
+        }
+        else{
+          null;
+        }
+      }())
+
     );
   }
 }
