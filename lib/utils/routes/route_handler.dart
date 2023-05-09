@@ -16,8 +16,14 @@ import 'package:ecommerce_app/view/splash.dart';
 import 'package:ecommerce_app/view/varificationPage.dart';
 import 'package:flutter/material.dart';
 
+import '../../view/AddOffer/bookingCancelled.dart';
+import '../../view/AddOffer/offer.dart';
 import '../../view/BuisnessStartup/shopStartupPage.dart';
 
+import '../../view/BuisnessStartup/startupDetails.dart';
+import '../../view/BuisnessStartup/subscriptionDetails.dart';
+import '../../view/BuisnessStartup/subscriptionPayment.dart';
+import '../../view/BuisnessStartup/subscriptionPlan.dart';
 import '../../view/home/account/card_page.dart';
 import '../../view/agreementPage.dart';
 import '../../view/home/account/page_noteFound.dart';
@@ -85,6 +91,18 @@ Route<dynamic> generateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const FavouritePage());
     case RoutesName.cardPage:
       return MaterialPageRoute(builder: (context) => const CardPage());
+      case RoutesName.startupDetails:
+      return MaterialPageRoute(builder: (context) => const StartupDetails());
+      case RoutesName.subscriptionplan:
+      return MaterialPageRoute(builder: (context) => const SubscriptionPlan());
+      case RoutesName.subscriptiondetails:
+      return MaterialPageRoute(builder: (context) => const SubscriptionDetails());
+      case RoutesName.subscriptionpayment:
+      return MaterialPageRoute(builder: (context) => const SubscriptionPayment());
+      case RoutesName.offer:
+      return MaterialPageRoute(builder: (context) => const Offer());
+      case RoutesName.bookingcancelled:
+      return MaterialPageRoute(builder: (context) => const BookingCancelled());
     default:
       throw ('This route name does not exit');
   }
