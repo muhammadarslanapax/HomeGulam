@@ -18,6 +18,7 @@ class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      backgroundColor: AppColors.whiteColor,
       appBar: AppBar(
         leading: IconButton(onPressed: (){},icon: Icon(Icons.arrow_back_rounded),color: Colors.black,),
         centerTitle: true,

@@ -30,7 +30,7 @@ import '../../view/home/account/page_noteFound.dart';
 import '../../view/home/account/term_and_condition.dart';
 import '../../view/home/category/category_page.dart';
 import '../../view/home/home/notification.dart';
-import '../../view/settings.dart';
+import '../../view/home/account/settings.dart';
 import '../../view/payment/slotBookedPage.dart';
 
 // Define Routes

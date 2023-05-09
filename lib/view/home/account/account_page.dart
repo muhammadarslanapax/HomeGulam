@@ -96,6 +96,8 @@ class Account extends StatelessWidget {
             padding: const EdgeInsets.only(left: 8.0),
             child: ListTile(
               onTap: (){
+                Navigator.pushNamed(context, RoutesName.settings);
+
 
 
               },
@@ -116,6 +118,7 @@ class Account extends StatelessWidget {
             padding: const EdgeInsets.only(left: 8.0),
             child: ListTile(
               onTap: (){
+                Navigator.pushNamed(context, RoutesName.termandcondition);
 
               },
 
