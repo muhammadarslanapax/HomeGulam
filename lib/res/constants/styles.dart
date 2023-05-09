@@ -10,7 +10,7 @@ class Styles{
     return OutlineInputBorder(borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide.none);}
 
-  TextStyle txtFormTitleStyle({required Color color, fontSize =16}){
+  TextStyle txtFormTitleStyle({required Color color, fontSize =16.0}){
     return GoogleFonts.poppins(fontSize: fontSize,
         color: color,fontWeight: FontWeight.w500);
   }
