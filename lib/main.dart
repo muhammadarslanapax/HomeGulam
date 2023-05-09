@@ -2,6 +2,9 @@ import 'package:ecommerce_app/res/color.dart';
 import 'package:ecommerce_app/utils/routes/route_handler.dart' as Routes;
 import 'package:ecommerce_app/utils/routes/routes_name.dart';
 import 'package:ecommerce_app/view/agreementPage.dart';
+import 'package:ecommerce_app/view/agreementPage.dart';
+import 'package:ecommerce_app/view/home/account/page_noteFound.dart';
+import 'package:ecommerce_app/view/home/account/page_noteFound.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

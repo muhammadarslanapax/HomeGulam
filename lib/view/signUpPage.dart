@@ -34,7 +34,7 @@ class SignUpPage extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 15),
+                    padding: const EdgeInsets.symmetric(vertical: 1),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -57,7 +57,7 @@ class SignUpPage extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 15),
+                    padding: const EdgeInsets.symmetric(vertical: 5),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -81,7 +81,7 @@ class SignUpPage extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 15),
+                    padding: const EdgeInsets.symmetric(vertical: 5),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -103,7 +103,7 @@ class SignUpPage extends StatelessWidget {
                 SizedBox(
                   width: double.infinity,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 15),
+                    padding: const EdgeInsets.symmetric(vertical: 5),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -124,7 +124,7 @@ class SignUpPage extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  height: 55,
+                  height: 50,
                   margin: const EdgeInsets.symmetric(vertical: 15),
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -139,7 +139,7 @@ class SignUpPage extends StatelessWidget {
                       }),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 15),
+                  padding: const EdgeInsets.symmetric(vertical: 5),
                   child: Text(
                     'or',
                     style: TextStyle(

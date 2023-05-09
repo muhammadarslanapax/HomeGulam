@@ -195,7 +195,7 @@ class _PaymentPageState extends State<PaymentPage> {
                             style: TextStyle(
                                 fontSize: 16, color: AppColors.whiteColor)),
                         onPressed: () {
-                          if(_formkey.currentState!.validate()){
+                          if(!_formkey.currentState!.validate()){
                             Utils.toastMessage("validate");
                             Navigator.push(
                                 context,
