@@ -55,6 +55,8 @@ class AppColors {
    static Color text_colorgrey = const Color(0xFF8F8F8F);
 
 
+   static Color box_color = const Color(0XFFFCD6CE);
+
 
 
 }

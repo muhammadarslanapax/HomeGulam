@@ -52,7 +52,7 @@ onTap: (){
                 ],
               ),
               const SizedBox(
-                height: 10,
+                height: 5,
               ),
               SizedBox(
                   width: MediaQuery.of(context).size.width * .7,
