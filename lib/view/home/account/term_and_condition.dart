@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../res/color.dart';
+
 class Term_and_Conditions extends StatefulWidget {
   const Term_and_Conditions({Key? key}) : super(key: key);
 
@@ -11,6 +13,8 @@ class _Term_and_ConditionsState extends State<Term_and_Conditions> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      backgroundColor: AppColors.whiteColor,
+
       appBar: AppBar(
         leading: Container(
             child: IconButton(onPressed: (){},icon: Icon(Icons.arrow_back_rounded,color: Colors.black,),)),

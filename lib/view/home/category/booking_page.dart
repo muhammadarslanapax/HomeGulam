@@ -87,11 +87,12 @@ class BookingPage extends StatelessWidget {
                   height: 56,
                   width: 111,
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: const [
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 4.0),
-                        child: Text("14:00-16:00 ",),
+                        child: FittedBox(child: Text("14:00-16:00 ",)),
                       ),
                     ],
                   ),

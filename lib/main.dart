@@ -49,6 +49,8 @@ class _MyAppState extends State<MyApp> {
         //  displaySmall: GoogleFonts.poppins(fontSize: 20,color: AppColors.redColor,fontWeight: FontWeight.w700),
         //  headlineMedium: GoogleFonts.poppins(fontSize: 20,color: AppColors.redColor,fontWeight: FontWeight.w700),
         // headlineSmall: GoogleFonts.poppins(fontSize: 20,color: AppColors.redColor,fontWeight: FontWeight.w700),
+
+
       )),
       onGenerateRoute: Routes.generateRoutes,
 

@@ -14,6 +14,10 @@ class Styles{
     return GoogleFonts.poppins(fontSize: fontSize,
         color: color,fontWeight: FontWeight.w500);
   }
+  TextStyle txtFormTitle2Style({required Color color}){
+    return GoogleFonts.poppins(fontSize: 18,
+        color: color,fontWeight: FontWeight.w500);
+  }
 
   BoxDecoration btnBorderStyle(){
     return BoxDecoration(
