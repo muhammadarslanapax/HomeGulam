@@ -23,6 +23,9 @@ abstract class RoutesName{
   static const String profilePage = 'profile';
   static const String favouritePage = 'Favourite';
   static const String cardPage = 'card';
+
+   static const String chatHomePage = 'chatPage';
+  static const String mainChatPage = 'mainChatPage';
   static const String startupDetails = 'startupDetails';
   static const String subscriptionplan = 'subscriptionplan';
   static const String subscriptiondetails = 'subscriptiondetails';

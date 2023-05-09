@@ -6,7 +6,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../res/constants/constants.dart' as Constants;
 import 'account/account_page.dart';
 import 'category/category_page.dart';
-import 'chat/chat_app.dart';
+import 'chat/chatHomePage.dart';
 import 'home/home_page1.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,7 +18,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _index = 0;
-  final List screens = const [Home(), Category(), Chat(),Account()];
+  final List screens = const [Home(), Category(), ChatHomePage(),Account()];
 
   void _onItemTapped(int index) {
     setState(() {

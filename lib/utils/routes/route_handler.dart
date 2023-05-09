@@ -5,6 +5,8 @@ import 'package:ecommerce_app/view/home/account/profile_page.dart';
 import 'package:ecommerce_app/view/home/category/booking_page.dart';
 import 'package:ecommerce_app/view/home/category/oppoointment.dart';
 import 'package:ecommerce_app/view/home/category/reviews.dart';
+import 'package:ecommerce_app/view/home/chat/chatHomePage.dart';
+import 'package:ecommerce_app/view/home/chat/mianChatPage.dart';
 import 'package:ecommerce_app/view/home/home_page.dart';
 import 'package:ecommerce_app/view/introduction_page.dart';
 import 'package:ecommerce_app/view/location/location_page.dart';
@@ -91,6 +93,10 @@ Route<dynamic> generateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const FavouritePage());
     case RoutesName.cardPage:
       return MaterialPageRoute(builder: (context) => const CardPage());
+ case RoutesName.chatHomePage:
+      return MaterialPageRoute(builder: (context) => const ChatHomePage());
+    case RoutesName.mainChatPage:
+      return MaterialPageRoute(builder: (context) => const MainChatPage());
       case RoutesName.startupDetails:
       return MaterialPageRoute(builder: (context) => const StartupDetails());
       case RoutesName.subscriptionplan:
@@ -103,6 +109,7 @@ Route<dynamic> generateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const Offer());
       case RoutesName.bookingcancelled:
       return MaterialPageRoute(builder: (context) => const BookingCancelled());
+
     default:
       throw ('This route name does not exit');
   }
