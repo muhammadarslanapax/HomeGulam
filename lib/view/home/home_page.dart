@@ -32,15 +32,18 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
 
         bottomNavigationBar: BottomNavigationBar(
+
           unselectedItemColor: AppColors.icon_color,
 
             type: BottomNavigationBarType.fixed,
+
           backgroundColor: AppColors.bottom_nav_bg_color,
 
 
           items: const <BottomNavigationBarItem>[
 
             BottomNavigationBarItem(
+
 
               icon: Icon(Icons.home_outlined),
               label: 'Home',
