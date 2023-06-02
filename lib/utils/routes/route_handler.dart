@@ -44,9 +44,9 @@ Route<dynamic> generateRoutes(RouteSettings settings) {
     case RoutesName.locationPage:
       return MaterialPageRoute(builder: (context) => const LocationPage());
     case RoutesName.sigUpPage:
-      return MaterialPageRoute(builder: (context) => const SignUpPage());
+      return MaterialPageRoute(builder: (context) =>  SignUpPage());
     case RoutesName.logInPage:
-      return MaterialPageRoute(builder: (context) => const LogInPage());
+      return MaterialPageRoute(builder: (context) =>  LogInPage());
     case RoutesName.verificationPage:
       return MaterialPageRoute(builder: (context) => const VerificationPage());
     case RoutesName.paymentPage:

@@ -16,368 +16,371 @@ class _HomeState extends State<Home> {
   final images = ["assets/images/face.png","assets/images/hair.png","assets/images/nail.png","assets/images/body.png","assets/images/hinna.png","assets/images/photography.png","assets/images/event.png","assets/images/tailor.png"];
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        width: double.infinity,
-        margin: const EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return SafeArea(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 12.0),
+        child: Scaffold(
+          body: Container(
+            width: double.infinity,
+            margin: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                RichText(
-                    text: TextSpan(
-                        text: "Hello",
-                        style: GoogleFonts.grandHotel(
-                            fontSize: 36, color: AppColors.text_color),
-                        children: [
-                      TextSpan(
-                          text: " Maria",
-                          style: GoogleFonts.aBeeZee(fontSize: 30))
-                    ])),
-                InkWell(
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    RichText(
+                        text: TextSpan(
+                            text: "Hello",
+                            style: GoogleFonts.grandHotel(
+                                fontSize: 36, color: AppColors.text_color),
+                            children: [
+                          TextSpan(
+                              text: " Maria",
+                              style: GoogleFonts.aBeeZee(fontSize: 30))
+                        ])),
+                    InkWell(
 onTap: (){
   Navigator.push(context, MaterialPageRoute(builder: (context)=>NotificationPage()));
 },                    child: Container(
 
-                      width: 45,
-                      height: 50,
-                      decoration: BoxDecoration(
-                          boxShadow: const [
-                            BoxShadow(
-                              color: Colors.grey,
-                              offset: Offset(0.0, 0.3), //(x,y)
-                              blurRadius: 0.5,
-                            ),
-                          ],
-                          color: AppColors.notification_icon_bg,
-                          borderRadius: BorderRadius.circular(6)),
-                      child: const Icon(Icons.notification_add_outlined)),
-                )
-              ],
-            ),
-            const SizedBox(
-              height: 5,
-            ),
-            SizedBox(
-                width: MediaQuery.of(context).size.width * .7,
-                child: Text(
-                    "Let's express categories to find best services for you",
-                    style: GoogleFonts.poppins(
-                      fontSize: 18,
-                      color: AppColors.text_color_light,
-                    ))),
-            const SizedBox(
-              height: 20,
-            ),
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 5),
-              padding: const EdgeInsets.only(left: 10),
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  color: AppColors.notification_icon_bg,
-                  borderRadius: BorderRadius.circular(6)),
-              child: TextFormField(
-                decoration: InputDecoration(
-                    suffixIcon: Icon(
-                      Icons.search,
-                      size: 35,
-                      color: AppColors.hint_color,
-                    ),
-                    hintText: "Search Service near you",
-                    hintStyle: TextStyle(color: AppColors.hint_color),
-                    border: InputBorder.none),
-              ),
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-
-
-            Flexible(
-              flex: 2,
-                child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-
-                  Text(
-                    "Explore Categories",
-                    style: GoogleFonts.poppins(
-                        fontSize: 20, color: AppColors.blackColor),
+                          width: 45,
+                          height: 50,
+                          decoration: BoxDecoration(
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Colors.grey,
+                                  offset: Offset(0.0, 0.3), //(x,y)
+                                  blurRadius: 0.5,
+                                ),
+                              ],
+                              color: AppColors.notification_icon_bg,
+                              borderRadius: BorderRadius.circular(6)),
+                          child: const Icon(Icons.notification_add_outlined)),
+                    )
+                  ],
+                ),
+                const SizedBox(
+                  height: 5,
+                ),
+                SizedBox(
+                    width: MediaQuery.of(context).size.width * .7,
+                    child: Text(
+                        "Let's express categories to find best services for you",
+                        style: GoogleFonts.poppins(
+                          fontSize: 18,
+                          color: AppColors.text_color_light,
+                        ))),
+                const SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 5),
+                  padding: const EdgeInsets.only(left: 10),
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      color: AppColors.notification_icon_bg,
+                      borderRadius: BorderRadius.circular(6)),
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                        suffixIcon: Icon(
+                          Icons.search,
+                          size: 35,
+                          color: AppColors.hint_color,
+                        ),
+                        hintText: "Search Service near you",
+                        hintStyle: TextStyle(color: AppColors.hint_color),
+                        border: InputBorder.none),
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  SizedBox(
-                    height: 250,
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
 
-                    child: GridView.builder(
-                        physics: NeverScrollableScrollPhysics(),
 
-                        gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
+                Flexible(
+                  flex: 2,
+                    child: SingleChildScrollView(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
 
-                            childAspectRatio: 0.800,
-                            crossAxisCount: 4, mainAxisSpacing: 4),
-                        itemCount: category.length,
-                        itemBuilder: (BuildContext context, int index) {
-                          return Column(
+                      Text(
+                        "Explore Categories",
+                        style: GoogleFonts.poppins(
+                            fontSize: 20, color: AppColors.blackColor),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      SizedBox(
+                        height: 250,
 
+                        child: GridView.builder(
+                            physics: NeverScrollableScrollPhysics(),
+
+                            gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+
+                                childAspectRatio: 0.800,
+                                crossAxisCount: 4, mainAxisSpacing: 4),
+                            itemCount: category.length,
+                            itemBuilder: (BuildContext context, int index) {
+                              return Column(
+
+                                children: [
+                                  Container(
+                                    height: 63,
+                                    width: 63,
+                                    decoration: BoxDecoration(
+                                      color: AppColors.notification_icon_bg,
+                                      borderRadius: BorderRadius.circular(63),
+                                      border: Border.all(
+                                        color: Colors.transparent,
+
+                                        // thic
+                                      ),
+                                    ),
+                                    child:  Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: CircleAvatar(
+                                        backgroundColor: Colors.transparent,
+                                        child: Image.asset(images[index].toString()),
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  Expanded(
+                                      child: Text(
+                                        category[index],
+                                        style: GoogleFonts.poppins(
+                                            fontSize: 12, color: AppColors.blackColor),
+                                      ))
+                                ],
+                              );
+                            }),
+                      ),
+                      const SizedBox(height: 10,),
+
+
+                      Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Featured Service",
+                                style: GoogleFonts.poppins(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w500,
+                                    color: AppColors.blackColor),
+                              ),
+                              Text(
+                                "See All",
+                                style: GoogleFonts.poppins(
+                                    fontSize: 14, color: AppColors.hint_color),
+                              )
+                            ],
+                          ),
+                          SizedBox(height: 10,),
+                          Column(
                             children: [
                               Container(
-                                height: 63,
-                                width: 63,
+                                  width: double.infinity,
+                                  height: 190,
+                                  child: Image.asset("assets/images/mainimg.png",fit: BoxFit.fill,)
+                              ),
+                              Container(
                                 decoration: BoxDecoration(
-                                  color: AppColors.notification_icon_bg,
-                                  borderRadius: BorderRadius.circular(63),
-                                  border: Border.all(
-                                    color: Colors.transparent,
+                                    color: AppColors.notification_icon_bg,
 
-                                    // thic
-                                  ),
+                                    borderRadius: BorderRadius.circular(12)
                                 ),
-                                child:  Padding(
+                                transform: Matrix4.translationValues(0.0, -50.0, 0.0),
+                                height: 76,
+
+                                child: Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: CircleAvatar(
-                                    backgroundColor: Colors.transparent,
-                                    child: Image.asset(images[index].toString()),
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Cleansing Facial",
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w400,
+                                                color: AppColors.blackColor),
+                                          ),
+                                          Row(
+                                            children: [
+                                              Icon(Icons.star,color: AppColors.star_color,),
+                                              SizedBox(width: 5,),
+                                              Text(
+                                                "4.8",
+                                                style: GoogleFonts.poppins(
+                                                    fontSize: 14, color: AppColors.blackColor),
+                                              ),
+                                            ],
+                                          ),
+
+                                        ],
+                                      ),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Jane's Spa",
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w400,
+                                                color: AppColors.text_color_light),
+                                          ),
+                                          Row(
+                                            children: [
+                                              Text(
+                                                "\$ 60",
+                                                style: GoogleFonts.poppins(
+                                                    fontSize: 14, color: AppColors.hint_color),
+                                              ),
+
+
+                                              SizedBox(width: 5,),
+                                              Text(
+                                                "2 hours",
+                                                style: GoogleFonts.poppins(
+                                                    fontSize: 14, color: AppColors.hint_color),
+                                              ),
+                                            ],
+                                          ),
+
+                                        ],
+                                      ),
+
+                                    ],
                                   ),
                                 ),
-                              ),
-                              const SizedBox(
-                                height: 8,
-                              ),
-                              Expanded(
-                                  child: Text(
-                                    category[index],
-                                    style: GoogleFonts.poppins(
-                                        fontSize: 12, color: AppColors.blackColor),
-                                  ))
+                              )
                             ],
-                          );
-                        }),
-                  ),
-                  const SizedBox(height: 10,),
-
-
-                  Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Featured Service",
-                            style: GoogleFonts.poppins(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500,
-                                color: AppColors.blackColor),
                           ),
-                          Text(
-                            "See All",
-                            style: GoogleFonts.poppins(
-                                fontSize: 14, color: AppColors.hint_color),
-                          )
-                        ],
-                      ),
-                      SizedBox(height: 10,),
-                      Column(
-                        children: [
-                          Container(
-                              width: double.infinity,
-                              height: 190,
-                              child: Image.asset("assets/images/mainimg.png",fit: BoxFit.fill,)
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                                color: AppColors.notification_icon_bg,
-
-                                borderRadius: BorderRadius.circular(12)
-                            ),
-                            transform: Matrix4.translationValues(0.0, -50.0, 0.0),
-                            height: 76,
-
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        "Cleansing Facial",
-                                        style: GoogleFonts.poppins(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w400,
-                                            color: AppColors.blackColor),
-                                      ),
-                                      Row(
-                                        children: [
-                                          Icon(Icons.star,color: AppColors.star_color,),
-                                          SizedBox(width: 5,),
-                                          Text(
-                                            "4.8",
-                                            style: GoogleFonts.poppins(
-                                                fontSize: 14, color: AppColors.blackColor),
-                                          ),
-                                        ],
-                                      ),
-
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        "Jane's Spa",
-                                        style: GoogleFonts.poppins(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w400,
-                                            color: AppColors.text_color_light),
-                                      ),
-                                      Row(
-                                        children: [
-                                          Text(
-                                            "\$ 60",
-                                            style: GoogleFonts.poppins(
-                                                fontSize: 14, color: AppColors.hint_color),
-                                          ),
 
 
-                                          SizedBox(width: 5,),
-                                          Text(
-                                            "2 hours",
-                                            style: GoogleFonts.poppins(
-                                                fontSize: 14, color: AppColors.hint_color),
-                                          ),
-                                        ],
-                                      ),
-
-                                    ],
-                                  ),
-
-                                ],
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Service near you",
+                                style: GoogleFonts.poppins(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w500,
+                                    color: AppColors.blackColor),
                               ),
-                            ),
-                          )
-                        ],
-                      ),
-
-
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Service near you",
-                            style: GoogleFonts.poppins(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500,
-                                color: AppColors.blackColor),
+                              Text(
+                                "See All",
+                                style: GoogleFonts.poppins(
+                                    fontSize: 14, color: AppColors.hint_color),
+                              )
+                            ],
                           ),
-                          Text(
-                            "See All",
-                            style: GoogleFonts.poppins(
-                                fontSize: 14, color: AppColors.hint_color),
-                          )
-                        ],
-                      ),
 
 
-                      const SizedBox(height: 10,),
-                      Column(
-                        children: [
-                          Container(
-                              width: double.infinity,
-                              height: 190,
-                              child: Image.asset("assets/images/mainimg.png",fit: BoxFit.fill,)
-                          ),
-                          Container(
-                            decoration: BoxDecoration(
-                                color: AppColors.notification_icon_bg,
-
-                                borderRadius: BorderRadius.circular(12)
-                            ),
-                            transform: Matrix4.translationValues(0.0, -50.0, 0.0),
-                            height: 76,
-
-                            child: Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        "Engagement Decor",
-                                        style: GoogleFonts.poppins(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w400,
-                                            color: AppColors.blackColor),
-                                      ),
-                                      Row(
-                                        children: [
-                                          Icon(Icons.star,color: AppColors.star_color,),
-                                          const SizedBox(width: 5,),
-                                          Text(
-                                            "4.8",
-                                            style: GoogleFonts.poppins(
-                                                fontSize: 14, color: AppColors.blackColor),
-                                          ),
-                                        ],
-                                      ),
-
-                                    ],
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        "Jane's Spa",
-                                        style: GoogleFonts.poppins(
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.w400,
-                                            color: AppColors.text_color_light),
-                                      ),
-                                      Row(
-                                        children: [
-                                          Text(
-                                            "\$ 300",
-                                            style: GoogleFonts.poppins(
-                                                fontSize: 14, color: AppColors.hint_color),
-                                          ),
-
-
-                                          const SizedBox(width: 5,),
-                                          Text(
-                                            "2 hours",
-                                            style: GoogleFonts.poppins(
-                                                fontSize: 14, color: AppColors.hint_color),
-                                          ),
-                                        ],
-                                      ),
-
-                                    ],
-                                  ),
-
-                                ],
+                          const SizedBox(height: 10,),
+                          Column(
+                            children: [
+                              Container(
+                                  width: double.infinity,
+                                  height: 190,
+                                  child: Image.asset("assets/images/mainimg.png",fit: BoxFit.fill,)
                               ),
-                            ),
-                          )
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: AppColors.notification_icon_bg,
+
+                                    borderRadius: BorderRadius.circular(12)
+                                ),
+                                transform: Matrix4.translationValues(0.0, -50.0, 0.0),
+                                height: 76,
+
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Engagement Decor",
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w400,
+                                                color: AppColors.blackColor),
+                                          ),
+                                          Row(
+                                            children: [
+                                              Icon(Icons.star,color: AppColors.star_color,),
+                                              const SizedBox(width: 5,),
+                                              Text(
+                                                "4.8",
+                                                style: GoogleFonts.poppins(
+                                                    fontSize: 14, color: AppColors.blackColor),
+                                              ),
+                                            ],
+                                          ),
+
+                                        ],
+                                      ),
+                                      Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Text(
+                                            "Jane's Spa",
+                                            style: GoogleFonts.poppins(
+                                                fontSize: 16,
+                                                fontWeight: FontWeight.w400,
+                                                color: AppColors.text_color_light),
+                                          ),
+                                          Row(
+                                            children: [
+                                              Text(
+                                                "\$ 300",
+                                                style: GoogleFonts.poppins(
+                                                    fontSize: 14, color: AppColors.hint_color),
+                                              ),
+
+
+                                              const SizedBox(width: 5,),
+                                              Text(
+                                                "2 hours",
+                                                style: GoogleFonts.poppins(
+                                                    fontSize: 14, color: AppColors.hint_color),
+                                              ),
+                                            ],
+                                          ),
+
+                                        ],
+                                      ),
+
+                                    ],
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+
                         ],
-                      ),
+
+                      )
+
+
+
 
                     ],
+                  ),
 
-                  )
-
-
-
-
-                ],
-              ),
-
-            )),
+                )),
 
 
 
@@ -390,7 +393,9 @@ onTap: (){
 
 
 
-          ],
+              ],
+            ),
+          ),
         ),
       ),
     );
