@@ -1,13 +1,12 @@
 import 'dart:async';
 
 import 'package:ecommerce_app/res/color.dart';
-import 'package:ecommerce_app/view/home/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../utils/routes/routes_name.dart';
+import '../view_modal/services/splash_services.dart';
 import 'introduction_page.dart';
 
 class Splash extends StatefulWidget {
@@ -18,17 +17,19 @@ class Splash extends StatefulWidget {
 }
 
 class _SplashState extends State<Splash> {
+  SplashServices splashServices = SplashServices();
+
   @override
   void initState() {
-    // TODO: implement initState
+    splashServices.checkAuthentication(context);
+
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
         overlays: [SystemUiOverlay.bottom]);
 
-    Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>
-      const Introduction()
-      ));
-    });
+    // Timer(const Duration(seconds: 3), () {
+    //   Navigator.pushReplacement(context,
+    //       MaterialPageRoute(builder: (context) => const Introduction()));
+    // });
 
     super.initState();
   }

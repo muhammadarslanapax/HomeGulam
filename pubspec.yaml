@@ -49,6 +49,8 @@ dependencies:
   google_fonts: ^4.0.4
   pin_code_fields: ^7.4.0
   flutter_rating_bar: ^4.0.1
+shared_preferences: ^2.1.1
+=======
   intl: ^0.17.0
 
 

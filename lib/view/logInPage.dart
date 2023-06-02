@@ -1,18 +1,51 @@
 import 'package:ecommerce_app/res/color.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:provider/provider.dart';
 
+import '../modal/user_model.dart';
 import '../res/constants/styles.dart';
 import '../utils/general_utils.dart';
+import '../utils/routes/routes_name.dart';
+import '../view_modal/auth_view_model.dart';
+import '../view_modal/user_view_model.dart';
 import 'signUpPage.dart';
 
-class LogInPage extends StatelessWidget {
+class LogInPage extends StatefulWidget {
   const LogInPage({Key? key}) : super(key: key);
 
   @override
+  State<LogInPage> createState() => _LogInPageState();
+}
+
+
+class _LogInPageState extends State<LogInPage> {
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
+
+  @override
+  void initState() {
+
+    // TODO: implement initState
+    super.initState();
+
+  }
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+
+    _emailController.dispose();
+    _passwordController.dispose();
+  }
+
+  @override
+
   Widget build(BuildContext context) {
-    final emailController = TextEditingController();
-    final passwordController = TextEditingController();
+     final authViewMode = Provider.of<AuthViewModel>(context);
+
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: AppColors.whiteColor,
@@ -39,7 +72,7 @@ class LogInPage extends StatelessWidget {
                               border: Styles().texFormStyle(),
                             ),
 
-                            controller: emailController,
+                            controller: _emailController,
 
                           ),
                         )
@@ -60,7 +93,7 @@ class LogInPage extends StatelessWidget {
                               fillColor: AppColors.textFieldBgColor,
                               border: Styles().texFormStyle(),
                             ),
-                            controller: passwordController,
+                            controller: _passwordController,
                           ),
                         )
                       ],
@@ -85,7 +118,58 @@ class LogInPage extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 18, color: AppColors.whiteColor)),
                         onPressed: () {
-                          Utils.toastMessage("login click");
+
+
+
+
+
+
+
+
+
+                          //
+                          Map data = {
+                            'email' : _emailController.text.toString(),
+                            'password' : _passwordController.text.toString(),
+                          };
+
+                          // Map data = {
+                          //   'email' : 'eve.holt@reqres.in',
+                          //   'password' : 'cityslicka',
+                          // };
+
+
+                          authViewMode.loginApi(data, context);
+
+                          // authViewMode.loginApi(data , context).then((value){
+                          //
+                          //
+                          //
+                          //
+                          //
+                          //
+                          //
+                          //   // var k = "This is key";
+                          //   //
+                          //   //
+                          //   // UserViewModel().saveUser(UserModel(token: k.toString()));
+                          //
+                          //
+                          //
+                          //
+                          // //  Navigator.pushNamed(context, RoutesName.homePage);
+                          //
+                          //
+                          // }).onError((error, stackTrace){
+                          //   Utils.toastMessage("Error  to login");
+                          //
+                          //
+                          //
+                          // });
+
+
+
+
                         }),
                   ),
 

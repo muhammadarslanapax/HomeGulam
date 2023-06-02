@@ -1,21 +1,66 @@
+import 'package:ecommerce_app/modal/user_model.dart';
 import 'package:ecommerce_app/res/color.dart';
 import 'package:ecommerce_app/res/components/custom_appbar.dart';
 import 'package:ecommerce_app/utils/routes/routes_name.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class Account extends StatelessWidget {
+import '../../../view_modal/services/splash_services.dart';
+
+class Account extends StatefulWidget {
   const Account({Key? key}) : super(key: key);
 
   @override
+  State<Account> createState() => _AccountState();
+}
+
+
+
+class _AccountState extends State<Account> {
+
+
+  var a ;
+  @override
   Widget build(BuildContext context) {
+
+
+
+
+
+    Future<UserModel> getUser()async{
+
+      final SharedPreferences sp = await SharedPreferences.getInstance();
+      final String? token = sp.getString('token');
+
+      return UserModel(
+          token: token.toString()
+      );
+    }
+
+
+     getUser().then((value){
+
+       a = value.toString();
+
+
+     });
+
+
+
+
+
+
+
+
+
     final _theme = Theme.of(context).textTheme;
     final _width = MediaQuery.of(context).size.width;
     final _height = MediaQuery.of(context).size.height;
     return  Scaffold(
       appBar: PreferredSize(preferredSize: const Size.fromHeight(60),
-      child: CustomAppBar(text: 'Account', txtcolor: AppColors.blackColor, iconData: null,)),
+      child: CustomAppBar(text: 'Account $a', txtcolor: AppColors.blackColor, iconData: null,)),
       backgroundColor: AppColors.whiteColor,
       body: SingleChildScrollView(
         child: Container(
@@ -80,6 +125,7 @@ class Account extends StatelessWidget {
 
               },
               leading: const Icon(Icons.payments_outlined),
+
               title: const Text(
                 "Payment  ",
                 style: TextStyle(
